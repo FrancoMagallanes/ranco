@@ -19,7 +19,55 @@ funcion eliminar_1 (v1 Por Referencia, varible_vector)
 	FinPara
 FinFuncion
 
+Funcion NoRepetir
+	Dimension prueba[15]
+	Dimension v3[10];
+	Dimension v2[10];
+	
+	Para a=1 Hasta 15 Con Paso 1 Hacer
+		prueba[a]=Falso
+	Fin Para
+	
+	contador=1
+	Mientras contador<16 Hacer
+		aux=Aleatorio(1,15);
+		Si prueba[aux]=Falso Entonces
+			prueba[aux]=Verdadero
+			v2[contador]=aux
+			contador=contador+1
+		Fin Si
+	Fin Mientras
+	
+//	Para z=1 Hasta 10 Con Paso 1 Hacer
+//		contador=1
+//		Mientras contador=1 Hacer
+//			v2[z]=al
+			//s=v2[z]
+//			Si prueba[s]=Falso Entonces
+//				prueba[aux]=Verdadero
+//				v2[contador]=aux
+//				contador=contador+1
+//			Fin Si
+//			//v2[z] = Aleatorio(1,15);
+//			//s=v2[z]
+////			si prueba[s]=Falso Entonces
+////				prueba[s]=Verdadero
+////				contador=0
+////			sino 
+////				contador=1
+////			FinSi
+//		Fin Mientras
+//		
+//	Fin Para
+	
+	Para a=1 Hasta 10 Con Paso 1 Hacer
+		Escribir Sin Saltar v2[a] " "
+	Fin Para
+
+FinFuncion
+
 Algoritmo practica
+	
 	Dimension v1[10];
 	para a = 1 Hasta 10 con paso 1 Hacer
 		v1[a] = Aleatorio(1,15);
@@ -35,7 +83,7 @@ Algoritmo practica
 	leer decision;
 	
 	para a = 1 Hasta 10 con paso 1 Hacer
-		Escribir v1[a] Sin Saltar " ";
+		Escribir Sin Saltar v1[a]  " ";
 	FinPara
 	
 	Escribir " "
@@ -47,6 +95,10 @@ Algoritmo practica
 				eliminar_1(v1,varible_vector);
 			FinPara
 		2:
+			
+			NoRepetir
+			
+			
 		3:
 		4:
 		5:
